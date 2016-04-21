@@ -1,14 +1,17 @@
 <html>
     <head>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="javascript/data.js"></script>
+            <script src="javascript/createnewclass.js"></script>
     </head>
     <body>
         
         <div class="container">
         <div class="jumbotron">
         <h1>Click to generate your class code</h1>
-        <form method="post" name="Code">
-            <input type="text" name="classCode" value="">
+        <form method="post" name="Code" onSubmit='return false' id='createclass'>
+            <input type="text" name="classCode" value="" id='classcode'>
             <input class = "btn btn-primary btn-sm"type="button" name="genClassCode" onclick="randomCode();" Value="Generate Code">
             <input class = "btn btn-primary btn-sm" type="submit" name="createClass" value="Create Class">
         </form>
@@ -33,7 +36,7 @@
     
     .jumbotron{
         text-align: center;
-        background: darkslateblue url(Background.png);
+        background: darkslateblue url(images/Background.png);
         background-size: 100% 100%;
     }
     .btn{

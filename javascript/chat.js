@@ -6,7 +6,7 @@ $(function () {
      
       
       if(text != "" && name !="") {
-          $.post('ChatPoster.php',{text: text, name: name, code: code}, function(data){
+          $.post(databaseHost + '/ChatPoster.php',{text: text, name: name, code: code}, function(data){
                     $(".chatMessages").append(data);
                 });
       }else{
@@ -15,11 +15,11 @@ $(function () {
   });  
     
     function getMessages(){
-        $.post('GetMessages.php', {code: code}, function(data){
+        $.post(databaseHost + '/GetMessages.php', {code: code}, function(data){
             $(".chatMessages").html(data);
         });
     }
     
     setInterval(getMessages,1500);
-
+    
 });

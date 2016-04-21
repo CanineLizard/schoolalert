@@ -9,7 +9,7 @@
             }
             .jumbotron{
                 text-align: center;
-                background: darkslateblue url(Background.png);
+                background: darkslateblue url(images/Background.png);
                 background-size: 100% 100%;
             }
         </style>
@@ -20,8 +20,13 @@
                 <h1>You have signed up!</h1>
                 
                 <form method="post">
-                    <input class="btn btn-primary btn-sm" type="submit" name="back" value="back to sign in">
+                    <input class="btn btn-primary btn-sm" type="button" name="back" value="back to sign in" onClick="redirect();">
                 </form>
+                <script>
+                    function redirect(){
+                        window.location.href = "index.html";
+                    }
+                </script>
             </div>
         </div>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

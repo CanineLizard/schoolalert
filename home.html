@@ -4,7 +4,9 @@
 			<link rel='stylesheet' type='text/css' href='css/style.css'/>
 			<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 			<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-            <script src="JavaScript/chat.js"></script>
+            <script src="javascript/data.js"></script>
+            <script src="javascript/chat.js"></script>
+            <script src="javascript/loggout.js"></script>
 
 	</head>
 	<body>
@@ -22,7 +24,7 @@
             </div>
         </div>
         <div class = "signout">
-            <form method="POST">
+            <form method="POST" onSubmit='return false;' id='loggout'>
                 <input type="submit" name="signOut" value="SignOut">
             </form>
         </div>

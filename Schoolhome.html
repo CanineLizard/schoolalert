@@ -1,12 +1,27 @@
 <html>
     <head>
-    
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="javascript/data.js"></script>
+        <script src="javascript/schoolcode.js"></script>
     </head>
     <body>
         <h1>Set the password to give to teachers</h1>
-        <form method="post">
-            <input type="text" name="setCode" placeholder="Set the code here">
+        <form action="#" onSubmit='return false;' name='SchoolCode' id='schoolcode'>
+            <input type="text" id='code' name="setCode" placeholder="Set the code here">
+            <input type="button" name="generateCode" value="Generate Code" onClick="randomCode();">
             <input type="submit" name="setCodeBtn" value="Submit">
         </form>
+        <script language="javascript" type="text/javascript">
+            function randomCode() {
+	       var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	       var string_length = 8;
+	       var randomstring = '';
+	       for (var i=0; i<string_length; i++) {
+             var rnum = Math.floor(Math.random() * chars.length);
+             randomstring += chars.substring(rnum,rnum+1);
+	       }
+	       document.SchoolCode.setCode.value = randomstring;
+            }
+        </script>
     </body>
 </html>
