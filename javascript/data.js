@@ -1,2 +1,1 @@
-var databaseHost = "http://192.168.0.9/schoolalert-api";
-
+var databaseHost = "http://71.77.192.81/schoolalert-api";
