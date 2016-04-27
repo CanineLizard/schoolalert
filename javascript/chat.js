@@ -1,8 +1,10 @@
 $(function () {
-  var code = 1234;
+  
   $(document).on('submit', '#chatForm', function () {
      var text = $.trim($("#text").val());
      var name = $.trim($("#name").val());
+      var code = localStorage.getItem("code");
+      console.log(code);
      
       
       if(text != "" && name !="") {
@@ -15,11 +17,19 @@ $(function () {
   });  
     
     function getMessages(){
+        var code = localStorage.getItem("code");
         $.post(databaseHost + '/GetMessages.php', {code: code}, function(data){
-            $(".chatMessages").html(data);
+            
+            var json = JSON.parse(data);
+            var messages = json.messages;
+            $(".chatMessages").html('');
+            for(i in messages){
+                $(".chatMessages").append('<p><b>' + messages[i].name + "</b><br>" + messages[i].text + "</p>");
+            }
+            
         });
     }
     
     setInterval(getMessages,1500);
-    
+    setInterval(getJoinedClasses,1500);
 });

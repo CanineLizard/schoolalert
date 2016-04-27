@@ -3,13 +3,39 @@
 			<title>School chat</title>
 			<link rel='stylesheet' type='text/css' href='css/style.css'/>
 			<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
             <script src="javascript/data.js"></script>
+            <script src="javascript/Getjoinedclassrooms.js"></script>
             <script src="javascript/chat.js"></script>
             <script src="javascript/loggout.js"></script>
+            <script src="javascript/Joinclass.js"></script>
+            <style>
+                .container h2{
+                    color: white;
+                }
+                .container h6{
+                    color:white;  
+                 }
+                
+                .jumbotron{
+                    text-align: center;
+                    background: darkslateblue url(images/Background.png);
+                    background-size: 100% 100%;
+                }
+                .btn{
+                    margin-top: 2px;
+                    width: 15%;
+                }
+                
+   
+</style>
+            
 
 	</head>
 	<body>
+        <div class="container">
+        <div class="jumbotron">
 		<div class = 'chatContainer'>
 			<div class = 'chatHeader'>
 				<h3> Welcome <?php echo ucwords($user); ?></h3>
@@ -22,11 +48,24 @@
                     <input type='submit' name='submit' value='Post' />
                 </form>
             </div>
+            
         </div>
-        <div class = "signout">
-            <form method="POST" onSubmit='return false;' id='loggout'>
-                <input type="submit" name="signOut" value="SignOut">
-            </form>
+         <div class="joinedclassrooms">
+            
+            </div>
+            <form onSubmit='return false;' action='#' id='joinclass'>
+            <input type="text" name="joinclasscode" id="classcodebox" placeholder="Enter Class code here">
+            <input type="submit" name="joinclassbutton" id="joinclassbtn" value="Join">
+        </form>
+                <div class = "signout">
+                    <form method="POST" onSubmit='return false;' id='loggout'>
+                        <input type="submit" name="signOut" value="SignOut">
+                    </form>
+                </div>
+        
+            </div>
         </div>
+ 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</body>
 </html>

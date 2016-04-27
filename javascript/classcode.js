@@ -1,4 +1,3 @@
-
 $(function (){ 
   function getClasses(){
         $.get('GetClasses.php', function(data){

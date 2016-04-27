@@ -1,15 +1,38 @@
 <html>
     <head>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="javascript/data.js"></script>
         <script src="javascript/schoolcode.js"></script>
+                <style>
+                .container h1{
+                    color: white;
+                }
+                .container h6{
+                    color:white;  
+                 }
+                
+                .jumbotron{
+                    text-align: center;
+                    background: darkslateblue url(images/Background.png);
+                    background-size: 100% 100%;
+                }
+                .btn{
+                    margin-top: 2px;
+                    width: 15%;
+                }
+                
+   
+</style>
     </head>
     <body>
+        <div class="container">
+        <div class="jumbotron">
         <h1>Set the password to give to teachers</h1>
         <form action="#" onSubmit='return false;' name='SchoolCode' id='schoolcode'>
             <input type="text" id='code' name="setCode" placeholder="Set the code here">
-            <input type="button" name="generateCode" value="Generate Code" onClick="randomCode();">
-            <input type="submit" name="setCodeBtn" value="Submit">
+            <input class="btn btn-primary btn-sm" type="button" name="generateCode" value="Generate Code" onClick="randomCode();">
+            <input class="btn btn-primary btn-sm" type="submit" name="setCodeBtn" value="Submit">
         </form>
         <script language="javascript" type="text/javascript">
             function randomCode() {
@@ -23,5 +46,8 @@
 	       document.SchoolCode.setCode.value = randomstring;
             }
         </script>
+            </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -3,15 +3,16 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="javascript/data.js"></script>
+        <script src="javascript/getClasses.js"></script>
         <script src="javascript/loggout.js"></script>
+        
     </head>
     <body>
         <div class="container">
         <div class="jumbotron">
-       <div>
             <h2>Your Classes:</h2>
            <form method="post" id='classForm'>
-                <input class ="btn btn-primary btn-sm" type="button" name="newClass" value="Create New Class" onClick="redirect();">
+                <input class ="btn btn-primary btn-sm" type="button" name="newClass" value="New Class" onClick="redirect();">
            </form>
            
            <script>
@@ -23,17 +24,12 @@
             
        
            </div>
-        </div>
+        
         <form method="post" onSubmit='return false;' id="loggout">
             <input class ="btn btn-primary btn-sm" type="submit" name="signOut" value="Sign Out">
         </form>
             </div>
         </div>
-                <script>
-                        $.get(databaseHost + '/GetClasses.php', function(data){
-                            $(".classes").html(data);
-                        });
-               </script>
         <style>
     .container h2{
         color: white;
@@ -41,6 +37,7 @@
         .container h6{
               color:white;  
     }
+   
     .jumbotron{
         text-align: center;
         background: darkslateblue url(images/Background.png);

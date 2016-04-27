@@ -1,12 +1,17 @@
 * {
     font-family:  'Open Sans';
     box-sizing: border-box;
+    
+    
 }
 
 .chatContainer {
     width: 400px;
     height: 500px;
     border: 2px solid #ddd;
+    background-color: white;
+    margin: auto;
+    
 }
 .chatConatiner > .chatHeader {
     width: 100%;
@@ -25,6 +30,7 @@
     height: 420px;
     border-bottom: 1px solid #ddd;
     overflow-y: scroll;
+    text-align: left;
 }
 
 .chatContainer > .chatBottom form input[type='submit']{

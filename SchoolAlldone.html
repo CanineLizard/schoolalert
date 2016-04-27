@@ -1,16 +1,41 @@
 <html>
     <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="javascript/data.js"></script>
         <script src="javascript/loggout.js"></script>
+               <style>
+                .container h1{
+                    color: white;
+                }
+                .container h6{
+                    color:white;  
+                 }
+                
+                .jumbotron{
+                    text-align: center;
+                    background: darkslateblue url(images/Background.png);
+                    background-size: 100% 100%;
+                }
+                .btn{
+                    margin-top: 2px;
+                    width: 15%;
+                }
+                
+   
+</style>
     </head>
     
     <body>
+        <div class="container">
+        <div class="jumbotron">
         <h1>Thank you for setting the code! Now all you have to do is give that code to your facilty and let them set up their classes</h1>
         
         <form onSubmit='return false;' action="#" id='loggout'>
-            <input type="submit" name="signOut" value="Sign Out">
+            <input class="btn btn-primary btn-sm" type="submit" name="signOut" value="Sign Out">
         </form>
-    
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            </div>
+        </div>
     </body>
 </html>
